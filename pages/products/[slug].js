@@ -22,7 +22,7 @@ const Product = ({product}) => {
         </Head>
 
         <h3>{product.name}</h3>
-        <img src={fromImageToUrl(product.image)} />
+        <img style={{marginRight:'40px'}} src={fromImageToUrl(product.image)} />
         <h3>{product.name}</h3>
         <BuyButton product={product} />
         <p>${twoDecimals(product.price)}</p>
@@ -50,8 +50,8 @@ export async function getStaticPaths() {
     const products_res = await fetch(`${API_URL}/products`)
     const products = await products_res.json()
     return {
-        paths: products.map(el => ({
-            params: {slug: String(el.slug)}
+        paths: products.map(element => ({
+            params: {slug: String(element.slug)}
         })),
         fallback: false
     };

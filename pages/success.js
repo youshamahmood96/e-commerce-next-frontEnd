@@ -5,6 +5,8 @@ import { API_URL } from '../utils/urls'
 
 import Link from 'next/link'
 
+import styles from '../styles/Success.module.css'
+
 const useOrder = (session_id) => {
     const [order, setOrder] = useState(null)
     const [loading, setLoading] = useState(null)
@@ -50,9 +52,10 @@ export default function Success(){
     return (
         <div>
             <h2>Hold on!</h2>
-            { loading && <p>We're confirming your purchase!</p>}
+            { loading && <p>Confirming Purchase!</p>}
             { !loading && order && (
-                <p>Your order was processed successfully! <Link href="/account">View Orders</Link></p>
+                <p>Your order was processed successfully! <br/> <br/> 
+                <Link href="/account"><button className={styles.btn} >View Orders</button></Link></p>
             )}
         </div>
     )
