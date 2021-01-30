@@ -13,8 +13,8 @@ export default function Home({ products }) {
         <meta name="description" content="Yousha attempts challenges" />
       </Head>
 
-      {products.map(product => (
-        <div className={styles.product}>
+      {products.map((product,index) => (
+        <div key={index} className={styles.product}>
           <Link href={`/products/${product.slug}`}>
             <a>
               <div className={styles.product__Rows}>

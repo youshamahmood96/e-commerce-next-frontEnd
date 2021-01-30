@@ -21,7 +21,7 @@ export const AuthProvider = (props) => {
       setUser({ email });
       router.push("/");
     } catch (err) {
-      console.log(err);
+      
     }
   };
 
@@ -48,12 +48,8 @@ export const AuthProvider = (props) => {
         if (isLoggedIn) {
             const { email } = await magic.user.getMetadata();
             setUser({ email });
-            //Add this just for test
-            const token = await getToken()
-            console.log("checkUserLoggedIn token", token)
         }
     } catch (err) {
-        console.log(err);
     }
   };
 
