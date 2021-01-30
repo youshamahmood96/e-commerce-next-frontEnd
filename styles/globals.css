@@ -19,7 +19,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-width: 150%;
 }
 
 footer {
@@ -30,10 +30,4 @@ h1 {
   max-width: calc(100% - 110px);
   margin: auto;
   line-height: 33px;
-}
-
-.img__yt {
-  max-width: 200px;
-  margin-left: 20px;
-  vertical-align: middle;
 }
